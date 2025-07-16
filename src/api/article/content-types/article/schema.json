@@ -1,11 +1,11 @@
 {
   "kind": "collectionType",
-  "collectionName": "events",
+  "collectionName": "articles",
   "info": {
-    "singularName": "event",
-    "pluralName": "events",
-    "displayName": "Event",
-    "description": "Create your event content"
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Article",
+    "description": "Create your blog content"
   },
   "options": {
     "draftAndPublish": true
@@ -33,25 +33,17 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::author.author",
-      "inversedBy": "events"
+      "inversedBy": "articles"
     },
     "category": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::category.category",
-      "inversedBy": "events"
+      "inversedBy": "articles"
     },
     "blocks": {
       "type": "dynamiczone",
-      "components": [
-        "shared.media",
-        "shared.quote",
-        "shared.rich-text",
-        "shared.slider"
-      ]
-    },
-    "date": {
-      "type": "date"
+      "components": ["shared.media", "shared.quote", "shared.rich-text", "shared.slider"]
     }
   }
 }
